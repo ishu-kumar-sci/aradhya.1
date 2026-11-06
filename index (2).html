@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Aaradhya.exe — A Surprise by Mukesh</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--p:#967AA1;--d:#0F1020;--pk:#F865B0;--l:#C3C9E9;--g:#E9C99B;--w:#f8f7fb;--m:#a9a7b8}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{min-height:100vh;color:var(--w);background:radial-gradient(circle at 15% 20%,#967aa129,transparent 32%),radial-gradient(circle at 85% 30%,#f865b019,transparent 30%),radial-gradient(circle at 50% 90%,#c3c9e914,transparent 35%),var(--d);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+.background{position:fixed;inset:0;z-index:-10;overflow:hidden;pointer-events:none}.aurora{position:absolute;width:650px;height:650px;border-radius:50%;filter:blur(100px);opacity:.16;animation:move 12s ease-in-out infinite alternate}.one{background:var(--p);left:-300px;top:-250px}.two{background:var(--pk);right:-350px;top:15%;animation-delay:-4s}.three{background:var(--l);bottom:-400px;left:35%;animation-delay:-8s}@keyframes move{to{transform:translate(80px,-40px) scale(1.15)}}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.45;animation:twinkle 3s infinite}@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.8;transform:scale(1.4)}}
+.float{position:absolute;font-size:14px;opacity:.12;animation:floatUp linear infinite}@keyframes floatUp{from{transform:translateY(110vh) rotate(0);opacity:0}15%{opacity:.16}to{transform:translateY(-15vh) rotate(180deg);opacity:0}}
+.page{min-height:100vh;width:100%;display:none;padding:30px 18px 60px;animation:in .7s ease}.page.active{display:flex;align-items:center;justify-content:center}@keyframes in{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.container{width:min(950px,100%);margin:auto}.glass{background:linear-gradient(145deg,#ffffff13,#ffffff06);border:1px solid #e9c99b2e;box-shadow:0 30px 100px #00000059,inset 0 1px #ffffff0f;backdrop-filter:blur(25px)}.card{border-radius:28px;padding:clamp(25px,5vw,55px)}
+.eyebrow{color:var(--g);font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px}
+h1,h2,h3{font-family:"Playfair Display",serif}h1{font-size:clamp(48px,10vw,92px);line-height:.95;letter-spacing:-3px}h2{font-size:clamp(36px,7vw,65px);line-height:1}
+.subtitle{color:var(--m);margin-top:20px;line-height:1.8;max-width:650px}.accent{color:var(--pk)}.gold{color:var(--g)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 27px;margin-top:30px;border:0;border-radius:999px;cursor:pointer;color:var(--d);background:var(--g);font:700 12px "DM Sans";letter-spacing:1.5px;text-transform:uppercase;box-shadow:0 10px 35px #e9c99b29;transition:.3s}.btn:hover{transform:translateY(-3px);box-shadow:0 16px 45px #e9c99b40}.btn.secondary{color:var(--w);background:#ffffff0f;border:1px solid #ffffff21}.btn.pink{background:var(--pk);color:#fff}
+.welcome-card{min-height:600px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.signature{margin-top:28px;color:var(--m);font-size:13px}.signature strong{color:var(--g)}
+.chapter{margin-bottom:30px}.chapter-number{color:var(--pk);font-size:12px;font-weight:700;letter-spacing:3px}
+.certificate{text-align:center;position:relative;overflow:hidden}.seal{width:85px;height:85px;border:1px solid #e9c99b80;border-radius:50%;display:grid;place-items:center;margin:0 auto 25px;color:var(--g);font-size:30px}.certificate h3{font-size:clamp(32px,6vw,55px);margin:15px 0}.certificate p{color:var(--m);line-height:1.8}.badge{display:inline-block;margin-top:25px;padding:10px 18px;border-radius:999px;background:#f865b014;border:1px solid #f865b033;color:var(--pk);font-size:11px;letter-spacing:2px;font-weight:700}
+.meter-card{text-align:center}.counter{font-family:"Playfair Display",serif;font-size:clamp(80px,18vw,150px);line-height:1;color:var(--g)}.percent{font-size:40px}.progress-wrap{width:100%;height:12px;border-radius:999px;background:#ffffff0f;overflow:hidden;margin:30px 0;border:1px solid #ffffff14}.progress{width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--p),var(--pk),var(--g));box-shadow:0 0 25px #f865b040;transition:width 2.5s cubic-bezier(.2,.8,.2,1)}.result{opacity:0;transform:translateY(10px);transition:.7s}.result.show{opacity:1;transform:none}.result strong{color:var(--pk)}
+.roast-card{text-align:center}.roast-box{min-height:150px;display:flex;align-items:center;justify-content:center;padding:25px;margin-top:30px;border-radius:20px;background:#00000026;border:1px solid #ffffff12}.roast-text{font-family:"Playfair Display",serif;font-size:clamp(23px,4vw,34px);color:var(--l);transition:.35s}.fade{opacity:0;transform:translateY(8px)}
+.vault{max-width:600px;margin:auto;text-align:center}.lock{width:100px;height:100px;margin:0 auto 25px;border-radius:30px;display:grid;place-items:center;font-size:43px;background:#967aa117;border:1px solid #967aa14d;box-shadow:0 20px 70px #967aa11f;transition:.6s}.lock.unlocked{color:var(--g);border-color:#e9c99b73;transform:rotate(5deg) scale(1.08)}.vault-title{font-size:clamp(35px,7vw,58px)}.password-area{max-width:430px;margin:35px auto 0}.password-input{width:100%;height:55px;padding:0 18px;border-radius:14px;outline:none;border:1px solid #ffffff1f;background:#00000038;color:#fff;text-align:center;font-size:16px;letter-spacing:4px}.password-input:focus{border-color:var(--p);box-shadow:0 0 0 4px #967aa114}.error{color:#ff9dbd;font-size:13px;margin-top:15px;min-height:20px}.secret{display:none;margin-top:35px;padding:28px;border-radius:20px;border:1px solid #e9c99b40;background:#e9c99b0a}.secret.show{display:block;animation:reveal .9s ease}@keyframes reveal{from{opacity:0;transform:translateY(20px) scale(.97);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}.secret-label{color:var(--g);font-size:11px;letter-spacing:3px;font-weight:700}.secret p{margin-top:18px;color:var(--l);line-height:1.9}
+.question{text-align:center;position:relative;overflow:hidden}.question h2{max-width:700px;margin:auto}.question-buttons{position:relative;min-height:180px;margin-top:15px;display:flex;align-items:center;justify-content:center;gap:20px}.yes-btn{transition:.35s;z-index:5}.no-btn{position:relative;z-index:4}
+.celebration{text-align:center}.vip{display:inline-block;padding:9px 18px;border:1px solid #e9c99b4d;border-radius:999px;color:var(--g);font-size:10px;font-weight:700;letter-spacing:3px;margin-bottom:25px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}.stat{padding:25px 12px;border-radius:20px;background:#ffffff09;border:1px solid #ffffff12}.stat-number{font-family:"Playfair Display",serif;font-size:35px;color:var(--g)}.stat-label{color:var(--m);font-size:11px;margin-top:5px}
+.confetti{position:fixed;width:7px;height:12px;top:-20px;z-index:100;animation:fall 3.5s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.letter{max-width:750px;margin:auto}.letter-inner{padding:clamp(30px,7vw,65px);position:relative}.letter h2{font-size:clamp(38px,7vw,60px);margin-bottom:35px}.letter p{color:var(--l);line-height:2;font-size:16px;margin-bottom:22px}.closing{margin-top:40px;color:var(--g)!important;font-family:"Playfair Display",serif;font-size:24px!important}
+.nav{position:fixed;z-index:50;bottom:20px;left:50%;transform:translateX(-50%);display:none;padding:8px;border-radius:999px;background:#0f1020bf;border:1px solid #ffffff17;backdrop-filter:blur(20px)}.nav button{border:0;background:transparent;color:var(--m);padding:10px 13px;border-radius:50%;cursor:pointer}.nav button.active{color:var(--g);background:#e9c99b14}
+.replay,.music{position:fixed;z-index:50;top:20px;width:44px;height:44px;border-radius:50%;border:1px solid #ffffff1a;background:#0f1020a6;color:var(--g);cursor:pointer;backdrop-filter:blur(15px)}.replay{right:20px;display:none}.music{left:20px;color:var(--l)}
+@media(max-width:600px){.page{padding:20px 13px 80px}.card{border-radius:23px;padding:27px 20px}.stats{gap:8px}.stat{padding:18px 5px}.stat-number{font-size:28px}.question-buttons{min-height:200px}.btn{padding:0 20px}}
+</style>
+</head>
+<body>
+<div class="background"><div class="aurora one"></div><div class="aurora two"></div><div class="aurora three"></div><div id="stars"></div><div id="floating"></div></div>
+<button class="music" id="musicBtn" title="Music">♪</button>
+<button class="replay" id="replayBtn" title="Replay">↻</button>
+<div class="nav" id="nav">
+<button data-page="1">01</button><button data-page="2">02</button><button data-page="3">03</button><button data-page="4">04</button><button data-page="5">05</button><button data-page="6">06</button>
+</div>
+
+<section class="page active" id="page0"><div class="container"><div class="glass card welcome-card">
+<div class="eyebrow">A Digital Friendship Experience</div>
+<h1>Hey,<br><span class="accent">Aaradhya!</span></h1>
+<p class="subtitle">Friendship, Fun & Drama.<br>One secret. One surprise. And definitely some nautanki.</p>
+<button class="btn" onclick="goTo(1)">Enter My World →</button>
+<div class="signature">A little something created by <strong>Mukesh</strong></div>
+</div></div></section>
+
+<section class="page" id="page1"><div class="container"><div class="chapter"><div class="chapter-number">CHAPTER 01</div><h2>Friendship.</h2></div>
+<div class="glass card certificate"><div class="seal">✦</div><div class="eyebrow">Official Friendship Certificate</div><h3>Aaradhya</h3>
+<p>This officially certifies that Aaradhya has successfully achieved the highly prestigious position of<br><strong class="gold">Chief Drama Officer</strong><br><br>Responsibilities include: unnecessary drama, random conversations, premium-level nautanki and making friendship unnecessarily entertaining.</p>
+<div class="badge">CERTIFIED • 100% OFFICIAL • NO REFUNDS</div><br><button class="btn" onclick="goTo(2)">Continue →</button></div></div></section>
+
+<section class="page" id="page2"><div class="container"><div class="chapter"><div class="chapter-number">CHAPTER 02</div><h2>Friendship Meter.</h2></div>
+<div class="glass card meter-card"><div class="eyebrow">Scanning friendship levels...</div><div class="counter"><span id="counter">0</span><span class="percent">%</span></div>
+<div class="progress-wrap"><div class="progress" id="progress"></div></div><div class="result" id="meterResult"><p class="subtitle" style="margin:auto">Result: <strong>Unlimited friendship</strong> + <strong>Unlimited nautanki.</strong></p></div>
+<button class="btn" onclick="goTo(3)">Check the Roast Zone →</button></div></div></section>
+
+<section class="page" id="page3"><div class="container"><div class="chapter"><div class="chapter-number">CHAPTER 03</div><h2>Roast Zone.</h2></div>
+<div class="glass card roast-card"><div class="eyebrow">Proceed at your own risk</div><p class="subtitle" style="margin:auto">A scientifically questionable machine designed to roast Aaradhya.</p>
+<div class="roast-box"><div class="roast-text" id="roastText">Click the button. Himmat hai toh.</div></div>
+<button class="btn pink" onclick="generateRoast()">Roast Me 🔥</button><br><button class="btn secondary" onclick="goTo(4)">Enter Secret Vault →</button></div></div></section>
+
+<section class="page" id="page4"><div class="container"><div class="chapter"><div class="chapter-number">CHAPTER 04</div><h2>Secret Vault.</h2></div>
+<div class="glass card vault"><div class="lock" id="lockIcon">🔒</div><div class="eyebrow" id="vaultStatus">CLASSIFIED</div><h2 class="vault-title">Secret Message Vault</h2>
+<p class="subtitle" style="margin:18px auto 0">Some things are worth unlocking.</p>
+<div class="password-area" id="passwordArea"><input type="password" id="passwordInput" class="password-input" placeholder="ENTER PASSWORD" autocomplete="off" maxlength="30"><div class="error" id="passwordError"></div><button class="btn pink" onclick="unlockVault()">Unlock Vault</button></div>
+<div class="secret" id="secretMessage"><div class="secret-label">✓ SECRET UNLOCKED</div><p>Aaradhya, tumse baat karna Mukesh ko sach mein achha lagta hai. Tumhari friendship uske liye special hai.</p></div>
+<button class="btn" id="vaultNext" style="display:none" onclick="goTo(5)">One Last Question →</button></div></div></section>
+
+<section class="page" id="page5"><div class="container"><div class="chapter"><div class="chapter-number">CHAPTER 05</div><h2>The Question.</h2></div>
+<div class="glass card question"><div class="eyebrow">Important Friendship Research</div><h2>Aaradhya, do you think Mukesh is a good friend?</h2>
+<div class="question-buttons"><button class="btn pink yes-btn" id="yesBtn" onclick="yesClicked()">YES ❤️</button><button class="btn secondary no-btn" id="noBtn" onclick="moveNoButton()">NO</button></div></div></div></section>
+
+<section class="page" id="page6"><div class="container"><div class="glass card celebration">
+<div class="vip">★ VIP FRIENDSHIP LIST ★</div><h1>HAHA! <span class="accent">GOT YOU!</span></h1>
+<p class="subtitle" style="margin:22px auto">Welcome to the VIP list. Your friendship application has been suspiciously approved.</p>
+<div class="stats"><div class="stat"><div class="stat-number">∞</div><div class="stat-label">Friendship</div></div><div class="stat"><div class="stat-number">99+</div><div class="stat-label">Nautanki</div></div><div class="stat"><div class="stat-number">100%</div><div class="stat-label">Memories</div></div></div>
+<button class="btn" onclick="showLetter()">Read the Letter →</button></div></div></section>
+
+<section class="page" id="page7"><div class="container"><div class="glass letter-inner">
+<div class="eyebrow">A Small Note</div><h2>Dear <span class="accent">Aaradhya,</span></h2>
+<p>Life mein bahut log milte hain, lekin kuch log apni alag jagah bana lete hain.</p>
+<p>Hamesha khush rehna, haste rehna aur apni ye funny personality kabhi mat badalna.</p>
+<p>Stay the same. Stay happy.</p>
+<p class="closing">With lots of teasing and friendship,<br>Mukesh.</p>
+<button class="btn secondary" onclick="resetExperience()">↻ Replay the Surprise</button>
+</div></div></section>
+
+<script>
+const stars=document.getElementById("stars");
+for(let i=0;i<90;i++){let s=document.createElement("div");s.className="star";s.style.left=Math.random()*100+"%";s.style.top=Math.random()*100+"%";s.style.animationDelay=Math.random()*4+"s";s.style.animationDuration=2+Math.random()*4+"s";stars.appendChild(s)}
+const floating=document.getElementById("floating"),symbols=["✦","✧","♡","✦","·"];
+for(let i=0;i<20;i++){let e=document.createElement("div");e.className="float";e.textContent=symbols[Math.floor(Math.random()*symbols.length)];e.style.left=Math.random()*100+"%";e.style.animationDuration=12+Math.random()*15+"s";e.style.animationDelay=-Math.random()*15+"s";floating.appendChild(e)}
+let currentPage=0,meterStarted=false;
+function goTo(page){document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));let t=document.getElementById("page"+page);if(!t)return;t.classList.add("active");currentPage=page;document.getElementById("nav").style.display=page===0?"none":"flex";document.getElementById("replayBtn").style.display=page===0?"none":"block";document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",Number(b.dataset.page)===page));window.scrollTo({top:0,behavior:"smooth"});if(page===2)startMeter()}
+document.querySelectorAll(".nav button").forEach(b=>b.addEventListener("click",()=>goTo(Number(b.dataset.page))));
+function startMeter(){if(meterStarted)return;meterStarted=true;let c=document.getElementById("counter"),p=document.getElementById("progress"),r=document.getElementById("meterResult"),v=0,t=setInterval(()=>{v++;c.textContent=v;p.style.width=v+"%";if(v>=100){clearInterval(t);setTimeout(()=>r.classList.add("show"),300)}},25)}
+const roasts=["Aaradhya ki nautanki ka koi end nahi hai... NASA bhi confuse hai. 🚀","Tumhara drama itna premium hai ki Netflix subscription bhi sharma jaye. 😂","Aaradhya.exe has stopped working... reason: too much nautanki.","Tum normal rehne ki koshish karti ho, par personality allow hi nahi karti. 😭","Friendship meter unlimited hai, patience meter thoda questionable hai. 😂","Tumhari random baaton ka koi syllabus nahi hai. 💀","Aaradhya detected. Peace mode automatically disabled. 😌","Tum ek insaan nahi, full-time entertainment package ho. 😂","Tumhare saath boring day naam ki koi cheez exist nahi karti.","Official warning: Aaradhya ki nautanki se distance maintain karein. ⚠️"];let lastRoast=-1;
+function generateRoast(){let t=document.getElementById("roastText");t.classList.add("fade");setTimeout(()=>{let i;do{i=Math.floor(Math.random()*roasts.length)}while(i===lastRoast);lastRoast=i;t.textContent=roasts[i];t.classList.remove("fade")},250)}
+function unlockVault(){let input=document.getElementById("passwordInput"),error=document.getElementById("passwordError"),value=input.value.trim().toUpperCase();if(value==="AARADHYA"){error.textContent="";document.getElementById("lockIcon").textContent="🔓";document.getElementById("lockIcon").classList.add("unlocked");document.getElementById("vaultStatus").textContent="ACCESS GRANTED";document.getElementById("passwordArea").style.display="none";document.getElementById("secretMessage").classList.add("show");setTimeout(()=>document.getElementById("vaultNext").style.display="inline-flex",900);successParticles()}else{error.textContent="Access denied. Password incorrect.";input.value="";input.animate([{transform:"translateX(0)"},{transform:"translateX(-8px)"},{transform:"translateX(8px)"},{transform:"translateX(-5px)"},{transform:"translateX(0)"}],{duration:350})}}
+document.getElementById("passwordInput").addEventListener("keydown",e=>{if(e.key==="Enter")unlockVault()});
+function successParticles(){for(let i=0;i<25;i++){let e=document.createElement("div");e.textContent=["✦","♡","✧","✨"][Math.floor(Math.random()*4)];e.style.cssText="position:fixed;left:50%;top:50%;z-index:100;pointer-events:none;color:"+(i%2?"#E9C99B":"#F865B0");document.body.appendChild(e);let a=Math.random()*Math.PI*2,d=100+Math.random()*300,x=Math.cos(a)*d,y=Math.sin(a)*d;e.animate([{transform:"translate(-50%,-50%) scale(0)",opacity:1},{transform:`translate(calc(-50% + ${x}px),calc(-50% + ${y}px)) scale(1.2)`,opacity:0}],{duration:900+Math.random()*500,easing:"cubic-bezier(.2,.8,.2,1)"});setTimeout(()=>e.remove(),1500)}}
+let noAttempts=0;
+function moveNoButton(){let b=document.getElementById("noBtn"),a=document.querySelector(".question-buttons");noAttempts++;let x=(Math.random()*2-1)*Math.max(30,a.clientWidth/2-80),y=(Math.random()*2-1)*70;b.style.position="absolute";b.style.left="50%";b.style.top="50%";b.style.transform=`translate(calc(-50% + ${x}px),calc(-50% + ${y}px))`;document.getElementById("yesBtn").style.transform=`scale(${Math.min(1+noAttempts*.08,1.7)})`}
+function yesClicked(){createConfetti();setTimeout(()=>goTo(6),700)}
+function createConfetti(){for(let i=0;i<100;i++){let e=document.createElement("div");e.className="confetti";e.style.left=Math.random()*100+"vw";e.style.animationDelay=Math.random()*.8+"s";e.style.background=["#967AA1","#F865B0","#C3C9E9","#E9C99B","#fff"][Math.floor(Math.random()*5)];document.body.appendChild(e);setTimeout(()=>e.remove(),4500)}}
+function showLetter(){goTo(7)}
+function resetExperience(){meterStarted=false;document.getElementById("counter").textContent="0";document.getElementById("progress").style.width="0%";document.getElementById("meterResult").classList.remove("show");document.getElementById("passwordInput").value="";document.getElementById("passwordError").textContent="";document.getElementById("passwordArea").style.display="block";document.getElementById("secretMessage").classList.remove("show");document.getElementById("vaultNext").style.display="none";document.getElementById("lockIcon").textContent="🔒";document.getElementById("lockIcon").classList.remove("unlocked");document.getElementById("vaultStatus").textContent="CLASSIFIED";let n=document.getElementById("noBtn");n.style.position="relative";n.style.left="";n.style.top="";n.style.transform="";document.getElementById("yesBtn").style.transform="";noAttempts=0;goTo(0)}
+document.getElementById("replayBtn").addEventListener("click",resetExperience);
+let audioContext=null,musicPlaying=false,musicTimer=null;
+document.getElementById("musicBtn").addEventListener("click",toggleMusic);
+function toggleMusic(){let b=document.getElementById("musicBtn");if(!musicPlaying){try{audioContext=new(window.AudioContext||window.webkitAudioContext)();musicPlaying=true;b.textContent="♫";playAmbientTone()}catch(e){b.textContent="♪"}}else{if(audioContext){audioContext.close();audioContext=null}clearTimeout(musicTimer);musicPlaying=false;b.textContent="♪"}}
+function playAmbientTone(){if(!audioContext||!musicPlaying)return;let o=audioContext.createOscillator(),g=audioContext.createGain();o.type="sine";o.frequency.value=220;g.gain.setValueAtTime(.018,audioContext.currentTime);o.connect(g);g.connect(audioContext.destination);o.start();o.stop(audioContext.currentTime+3);musicTimer=setTimeout(playAmbientTone,3500)}
+goTo(0);
+</script>
+</body>
+</html>
